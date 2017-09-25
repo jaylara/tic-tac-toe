@@ -1,8 +1,178 @@
+/*
+For X background: http://www.colourlovers.com/pattern/50713/pat
+<a href="http://www.colourlovers.com/pattern/50713/pat" target="_blank"><img src="http://www.colourlovers.com/images/badges/n/50/50713_pat.png" style="width: 240px; height: 120px; border: 0 none;" alt="pat" /></a><br /><span style="font-size: 10px; color: #5e5e5e;"><a href="http://www.colourlovers.com/seamless-studio" target="_blank" style="font-size: 10px; color: #5e5e5e;">Vector Patterns</a> by <a href="http://www.colourlovers.com/" target="_blank" style="font-size: 10px; color: #5e5e5e;">COLOURlovers</a></span>
+
+*/
+
+body {
+  margin: 0px;
+  padding: 0px;
+  top: 0;
+  left: 0;
+  font-family: "Myriad Pro";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.container {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+header {
+  border-bottom: 3px solid black;
+  background-image: url("../images/header.png");
+
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 3px 3px 5px gray;
+  flex:1;
+}
+
+header .title {
+  color: black;
+  text-align: left;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
+  text-shadow: 2px 2px 4px gray;
+  flex: 2;
+}
+
+footer {
+  border-top: 3px solid black;
+  background-image: url("../images/header.png");
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: bold;
+  flex:1;
+  clear: both;
+  bottom:0;
+}
+
+.score-box {
+  max-width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 4px gray;
+  font-size: 16px;
+  text-align: center;
+  flex:2;
+  margin-right: 7px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.score-box p {
+  background-color: skyblue;
+  border-bottom: 2px dashed black;
+  font-size: 14px;
+  line-height: 32px;
+  flex: 1;
+  margin: 0px;
+}
+
+.score-box span {
+  flex: 1;
+  font-size: 27px;
+  line-height: 32px;
+}
+
+.box-button {
+  cursor: pointer;
+  justify-content: center;
+  background-color: orange;
+  max-width: 90px;
+  height: 70px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 4px gray;
+  font-size: 16px;
+  text-align: center;
+  flex:2;
+  margin-right: 7px;
+  display: flex;
+  font-weight: bold;
+}
+
+.box-button span {
+  flex: 0;
+}
+
 #board {
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  flex: 0;
+  border: 1px solid black;
+  margin-right: 15px;
+  background-color: black;
+  box-shadow: 2px 2px 4px gray;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility:visible;
+}
+
+aside {
+  display: flex;
+  flex: 0;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+
+textarea {
+  height:390px;
+  width: 300px;
+  border: 2px solid black;
+}
+
+.row {
+  border-width: 0px;
+  display: flex;
+  flex-direction: row;
 }
 
 .box {
   border: 1px solid black;
-  height: 150px;
+  color: black;
+  line-height: 0px;
+  font-weight: bold;
+  font-size: 100px;
+  min-width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: column wrap;
+  background-color: white;
+}
+
+.box:hover, .box-button:hover {
+  background-color: skyblue;
+}
+
+.box-playerX {
+  background-color: pink;
+  cursor: default;
+}
+
+.box-playerO {
+  background-color: lightgreen;
+  cursor: default;
+}
+
+.box-win
+{
+  background-color: yellow;
 }
