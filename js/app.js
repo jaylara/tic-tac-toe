@@ -76,31 +76,26 @@ function WriteGameLog(player,message) {
 
 function DisplayWin(winner,times) {
 
-
-
-
-  if(times === 2) {
-
-    WriteGameLog("",`Player ${winner} wins a double!!`);
-  }
-  else if(times === 1) {
-    WriteGameLog("",`Player ${winner} wins!!`);
-  }
-  else if (turns === 10) {
-    WriteGameLog("",`No more turns! Game is a TIE!!`);
-
+  if(times === 0)  {
+    if (turns === 9) {
+      WriteGameLog("",`No more turns! Game is a TIE!!`);
       WriteGameLog("",`Press 'RESET' to start a new game`);
-
-    document.getElementById('ties').textContent = ties;
-    return;
+      ties++;
+      document.getElementById('ties').textContent = ties;
+      return;
+    }
+  return;
   }
-  else if(times === 0)  return;
 
+  turns = 9;
+  if(times === 2)
+    WriteGameLog("",`Player ${winner} wins a double!!`);
+  else if(times === 1)
+    WriteGameLog("",`Player ${winner} wins!!`);
 
   switch(winner) {
     case "X": winsX += times; break;
     case "O": winsO += times; break;
-    default: ties++; break;
   }
 
   document.getElementById('wins-X').textContent = winsX;
